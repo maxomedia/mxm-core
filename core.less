@@ -1,0 +1,36 @@
+
+/*
+	Classic clearfix mixin, based on: 
+	http://nicolasgallagher.com/micro-clearfix-hack
+*/
+.clearfix(){
+	&:before, &:after{ content: " "; display: table; }
+	&:after{ clear: both; }
+}
+.clearfix { &:extend(.clearfix all); } // Expose mixin as class
+
+/*
+	For generally handling margin between elements
+*/
+.inner(@margin: 1em){
+	> * {
+		margin-top: @margin;
+		&:first-child { margin-top: 0; }
+	}
+}
+.inner { &:extend(.inner all); } // Expose mixin as class
+
+/*
+	For screenreaders only
+*/
+.sr-only () {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	padding:0 !important;
+	border:0 !important;
+	height: 1px !important;
+	width: 1px !important;
+	overflow: hidden;
+}
+.sr-only { &:extend(.sr-only all); } // Expose mixin as class
