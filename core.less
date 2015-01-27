@@ -1,15 +1,24 @@
 
 /*
+	Clearfix
+	========
+
 	Classic clearfix mixin, based on: 
 	http://nicolasgallagher.com/micro-clearfix-hack
 */
 .clearfix(){
+	*zoom: 1; /* IE6, IE7 */
 	&:before, &:after{ content: " "; display: table; }
 	&:after{ clear: both; }
 }
-.clearfix { &:extend(.clearfix all); } // Expose mixin as class
+// Expose mixin as class, so that :extend(.clearfix); can be used
+.clearfix { .clearfix(); }
+
 
 /*
+	Inner
+	=====
+
 	For generally handling margin between elements
 */
 .inner(@margin: 1em){
@@ -18,9 +27,14 @@
 		&:first-child { margin-top: 0; }
 	}
 }
-.inner { &:extend(.inner all); } // Expose mixin as class
+// Expose mixin as class, so that :extend(.inner); can be used
+.inner { .inner(); }
+
 
 /*
+	Screen reader
+	=============
+
 	For screenreaders only
 */
 .sr-only () {
@@ -33,4 +47,5 @@
 	width: 1px !important;
 	overflow: hidden;
 }
-.sr-only { &:extend(.sr-only all); } // Expose mixin as class
+// Expose mixin as class, so that :extend(.sr-only); can be used
+.sr-only { .sr-only(); }
