@@ -49,3 +49,21 @@
 }
 // Expose mixin as class, so that :extend(.sr-only); can be used
 .sr-only { .sr-only(); }
+
+/* Text-Shadow with IE9/8 Fallback - V 0.1 */
+.textshadow(@x: 0px,@y: 0px,@spread: 8px,@shadowColor: #000,@fontColor: #000) {
+	@blur: round(unit(@spread) * 0.75);
+	@xOff: @x - (@blur * 1.75);
+	@yOff: @y - (@blur * 1.1);
+
+	display: block; position: relative; text-shadow: @x @y @spread @shadowColor;
+
+	.no-textshadow & {
+		[data-textshadow] {
+			display: block; margin: @yOff 0 0 @xOff; color: @shadowColor;
+			-ms-filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=@blur);
+			filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=@blur);
+			&:before { display: block; content: attr(data-textshadow); position: absolute; top: auto; bottom: auto; left: auto; right: auto; margin: (@yOff * -1) 0 0 (@xOff * -1); width: 100%; color: @fontColor; text-align: inherit; }
+		}
+	}
+}
