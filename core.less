@@ -1,42 +1,33 @@
-
-/*
-	Clearfix
-	========
-
-	Classic clearfix mixin, based on: 
-	http://nicolasgallagher.com/micro-clearfix-hack
-*/
+/**
+ * Classic clearfix mixin, based on: http://nicolasgallagher.com/micro-clearfix-hack
+ * @return {css} 
+ */
 .clearfix(){
-	*zoom: 1; /* IE6, IE7 */
+ *zoom: 1; /* IE6, IE7 */
 	&:before, &:after{ content: " "; display: table; }
 	&:after{ clear: both; }
 }
-// Expose mixin as class, so that :extend(.clearfix); can be used
-.clearfix { .clearfix(); }
+.clearfix { .clearfix(); } // Use :extend(.clearfix all);
 
 
-/*
-	Inner
-	=====
-
-	For generally handling margin between elements
-*/
+/**
+ * Handle margin between child elements generally
+ * @param  {dimension} @margin: 1em           How much margin top will be applied
+ * @return {css}          
+ */
 .inner(@margin: 1em){
 	> * {
 		margin-top: @margin;
 		&:first-child { margin-top: 0; }
 	}
 }
-// Expose mixin as class, so that :extend(.inner); can be used
-.inner { .inner(); }
+.inner { .inner(); } // Use :extend(.inner all);
 
 
-/*
-	Screen reader
-	=============
-
-	For screenreaders only
-*/
+/**
+ * Hide elements visually, keeping them accessible for screenreaders
+ * @return {css}
+ */
 .sr-only () {
 	position: absolute !important;
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
@@ -47,10 +38,18 @@
 	width: 1px !important;
 	overflow: hidden;
 }
-// Expose mixin as class, so that :extend(.sr-only); can be used
-.sr-only { .sr-only(); }
+.sr-only { .sr-only(); } // Use :extend(.sr-only all);
 
-/* Text-Shadow with IE9/8 Fallback - V 0.1 */
+
+/**
+* text-shadow-mixin with IE8/9 fallback
+* @param  {px}    @x:              0px           x offset
+* @param  {px}    @y:              0px           y offset
+* @param  {px}    @spread:         8px           spread
+* @param  {color} @shadowColor:    #000          color of the shadow
+* @param  {color} @fontColor:      #000          font color
+* @return {css}               
+*/
 .textshadow(@x: 0px,@y: 0px,@spread: 8px,@shadowColor: #000,@fontColor: #000) {
 	@blur: round(unit(@spread) * 0.75);
 	@xOff: @x - (@blur * 1.75);
