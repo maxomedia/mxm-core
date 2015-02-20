@@ -66,3 +66,29 @@
 		}
 	}
 }
+
+/**
+ * For staggered/delayed transitions
+ * @param  {number} @delay The delay between each step
+ * @param  {number} @max Maximum elements that get delayed. Any elements beyond limit get the delay of the last element
+ * @param  {string} @selector Optional child selector
+ * @param  {number} @index Starting point of the loop, do not pass this parameter.
+ * @return {css}
+ */
+.stagger(@delay: 50, @max: 5, @selector: ~'', @index: 0) when (@index < @max) {
+
+	// Set transition delay
+	&:nth-child(@{index})@{selector}{
+		transition-delay: @delay * @index + 0ms;
+	}
+
+	// Trigger loop
+	.stagger(@delay, @max, @selector, (@index + 1));
+}
+.stagger(@delay: 50, @max: 5, @selector: ~'', @index: 0) when (@index >= @max){
+
+	// Delay elements beyond max
+	&:nth-child(n+@{index})@{selector}{
+		transition-delay: @index * @delay  + 0ms;
+	}
+}
