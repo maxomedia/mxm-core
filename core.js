@@ -26,6 +26,9 @@ exports.getTransitionEndString = function (){
 	        return transitions[i];
 	    }
 	}
+
+	// Return a fallback for browsers who don't know transitions
+	return 'transitionEndFallback';
 }
 
 /**
