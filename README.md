@@ -1,6 +1,15 @@
 # mxm-core
 
-Work in progress, do not use yet.
+Useful and small functions needed in almost every medium to big project.
+
+## LESS
+
+You can link to showcases of the mixins here:
+- **stagger** & **backStagger**: http://codepen.io/tuelsch/pen/vOKzdR
 
 
-Please submit pull requests to complete this file!
+## Javascript
+
+You can link to showcases of the functions here:
+- no showcases yet
+
