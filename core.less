@@ -92,3 +92,30 @@
 		transition-delay: @index * @delay  + 0ms;
 	}
 }
+
+/**
+ * For staggered/delayed transitions beginning with
+ * the last element and staggering backwards
+ * @param  {number} @delay The delay between each step
+ * @param  {number} @max Maximum elements that get delayed. Any elements beyond limit get the delay of the last element
+ * @param  {string} @selector Optional child selector
+ * @param  {number} @index Starting point of the loop, do not pass this parameter.
+ * @return {css}
+ */
+.backStagger(@delay: 50, @max: 5, @selector: ~'', @index: 1) when (@index < @max) {
+
+	// Set transition delay
+	&:nth-last-child(@{index})@{selector}{
+		transition-delay: @delay * @index + 0ms;
+	}
+
+	// Trigger loop
+	.backStagger(@delay, @max, @selector, (@index + 1));
+}
+.backStagger(@delay: 50, @max: 5, @selector: ~'', @index: 0) when (@index >= @max){
+
+	// Delay elements beyond max
+	&:nth-last-child(n+@{index})@{selector}{
+		transition-delay: @index * @delay  + 0ms;
+	}
+}
