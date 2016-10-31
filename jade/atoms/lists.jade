@@ -1,0 +1,21 @@
+.row
+  .col-sm-4
+    h4 Simple list
+    ul
+      -for(var i=0, m=5; i<m; i++)
+        li Eintrag #{i}
+
+  .col-sm-4
+    h4 .striped list
+    ul.striped
+      -for(var i=0, m=5; i<m; i++)
+        li.green-border Eintrag #{i}
+
+  .col-sm-4
+    h4 .striped list with icons
+    ul.striped
+      -for(var i=0, m=5; i<m; i++)
+        li.green-border
+          svg.gfx(height="24" width="24")
+            use.darkestgreen-stroke(xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#news")
+          span  Eintrag #{i}
