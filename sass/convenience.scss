@@ -1,0 +1,107 @@
+img {
+	max-width: 100%;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.opaque {
+	opacity: 0;
+}
+
+.ellipsis {
+	display: block;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.one-line {
+	white-space: nowrap;
+}
+
+.dashed {
+	border-style: dashed;
+}
+
+.dotted {
+	border-style: dotted;
+}
+
+.no-border {
+	border: 0 solid transparent !important;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.no-underline {
+	text-decoration: none;
+}
+
+// Styleguide only class
+.guide{
+	background: #efefef;
+	line-height: 2.5;
+	padding-left:15px;
+}
+
+.fade {
+	transition: opacity 1000ms;
+	opacity: 0.1;
+}
+
+// horizontal spacing
+.one-rem-space{
+	margin: 1rem 0; // 16px
+}
+.two-rem-space{
+	margin: 2rem 0; // 32px
+}
+.three-rem-space{
+	margin: 3rem 0; // 48px
+}
+.four-rem-space{
+	margin: 4rem 0; // 64px
+}
+
+//make element fullwidth without breaking bootstrap structure
+.fullwidth{
+	margin-left: calc(-50vw + 50%);
+	margin-right: calc(-50vw + 50%);
+}
+
+.margin-minus {
+	margin-left: calc(-1*(1rem + 15px));
+	margin-right: calc(-1*(1rem + 15px));
+}
+
+svg path {
+  stroke: inherit;
+}
