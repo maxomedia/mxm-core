@@ -1,0 +1,48 @@
+- var err = 'This will be an error!'
+
+//- Inputs
+div.row
+		form.col-sm-12
+			.row
+				.input-field.col-sm-12
+					input#first_name(type='text')
+					label(for='first_name') First Name
+			.row
+				.input-field.col-sm-12
+					input#last_name(type='text')
+					label(for='last_name') Last Name
+			.row
+				.input-field.col-sm-12
+					input#disabled(disabled='', value='I am not editable', type='text')
+					label(for='disabled') Disabled
+			.row
+				.input-field.col-sm-12
+					input#password(type='password')
+					label(for='password') Password
+			.row
+				.input-field.col-sm-12
+					input#email(type='email')
+					label(for='email') Email
+div.row
+		form.col-sm-12
+			.row
+				.input-field.col-sm-12
+					i.material-icons.prefix account_circle
+					input#first_name_icon(type='text')
+					label(for='first_name_icon') First Name
+			.row
+				.input-field.col-sm-12
+					i.material-icons.prefix account_circle
+					input#last_name_icon(type='text')
+					label(for='last_name_icon') Last Name
+div.row
+	form.col-sm-12
+		.row
+			.input-field.col-sm-12
+				select
+					option(value="" disabled selected) Choose your option
+					option(value="1") Option 1
+					option(value="2") Option 2
+					option(value="3") Option 3
+				label Select
+		br
