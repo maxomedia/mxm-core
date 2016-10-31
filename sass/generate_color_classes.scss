@@ -1,0 +1,44 @@
+// Use SASS here to generate all the needed border, text and background classes
+$c_colors: (
+'darkestgreen'	:	$darkestgreen,
+'darkgreen'			:	$darkgreen,
+'green'					:	$green,
+'green80'				:	$green80,
+'lightgreen'		:	$lightgreen,
+'lightestgreen' :	$lightestgreen,
+'orange'				:	$orange,
+'black'					:	$black
+);
+
+@each $color_name, $color_value in $c_colors {
+  .#{$color_name}-bg {
+    background-color: $color_value !important;
+  }
+  .#{$color_name}-text {
+    color: $color_value !important;
+  }
+  .#{$color_name}-border {
+    border-color: $color_value;
+		border-width: 1px;
+		border-style: solid;
+
+    &.border-top {
+      border-color: $color_value transparent transparent;
+    }
+
+    &.border-bottom {
+      border-color: transparent transparent $color_value;
+    }
+
+    &.border-left {
+      border-color: transparent transparent transparent $color_value;
+    }
+
+    &.border-right {
+      border-color: transparent $color_value transparent transparent;
+    }
+  }
+  .#{$color-name}-stroke {
+    stroke: $color_value;
+  }
+}
