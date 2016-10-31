@@ -1,0 +1,14 @@
+.row
+  .col-sm-4
+    p
+      input#s-radio-1.with-gap(name="s-radio" type="radio")
+      label(for="s-radio-1") Radio
+  .col-sm-4
+    p
+      input#s-radio-2.invalid.with-gap(name="s-radio" type="radio")
+      label(for="s-radio-2") Radio error
+    p.error This is required
+  .col-sm-4
+    p
+      input#s-radio-3.with-gap(name="s-radio" type="radio" disabled)
+      label.error(for="s-radio-3") Radio disabled
