@@ -7,7 +7,7 @@ var transitionend_cache;
  * Get the correctly prefixed transitionend event string
  * @return {string} Transitionend event name
  */
-exports.getTransitionEndString = function (){
+export default function (){
 	var i,
 	    undefined,
 	    el = document.createElement('div'),

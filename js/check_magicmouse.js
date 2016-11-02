@@ -5,3 +5,5 @@ isMagicMouse = /(macintosh)/i.test(navigator.userAgent);
 if (isMagicMouse) {
 	document.body.classList.add('isMagicMouse');
 }
+
+export default isMagicMouse;

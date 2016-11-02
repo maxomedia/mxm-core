@@ -2,7 +2,7 @@
  * Check if window width is below mobile threshhold
  * @return {Boolean} True if mobile, false if above or equal 768
  */
-exports.isMobileView = function () {
+export const isMobileView = function () {
 	return window.innerWidth < 768;
 }
 
@@ -16,7 +16,7 @@ var mobile = 768;				//    0 -   767 px
  * Get a string representing current viewport width
  * @return {string} Viewport width category
  */
-exports.getViewport = function () {
+export const getViewport = function () {
 	var width = window.innerWidth;
 
 	if(width < desktop) device = 'desktop';
