@@ -18,25 +18,19 @@ $c_colors: (
     color: $color_value !important;
   }
   .#{$color_name}-border {
-    border-color: $color_value;
-		border-width: 1px;
-		border-style: solid;
-
-    &.border-top {
-      border-color: $color_value transparent transparent;
-    }
-
-    &.border-bottom {
-      border-color: transparent transparent $color_value;
-    }
-
-    &.border-left {
-      border-color: transparent transparent transparent $color_value;
-    }
-
-    &.border-right {
-      border-color: transparent $color_value transparent transparent;
-    }
+    border: 1px solid $color_value;
+  }
+  .#{$color_name}-border-top {
+    border-top: 1px solid $color_value;
+  }
+  .#{$color_name}-border-right {
+    border-right: 1px solid $color_value;
+  }
+  .#{$color_name}-border-bottom {
+    border-bottom: 1px solid $color_value;
+  }
+  .#{$color_name}-border-left {
+    border-left: 1px solid $color_value;
   }
   .#{$color-name}-stroke {
     stroke: $color_value;
