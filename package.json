@@ -1,0 +1,19 @@
+{
+  "name": "mxm-core",
+  "version": "1.0.0",
+  "description": "Frontend Core, Maxomedia AG",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxomedia/mxm-core.git"
+  },
+  "author": "Philipp Gfeller <philipp.gfeller@maxomedia.ch>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maxomedia/mxm-core/issues"
+  },
+  "homepage": "https://github.com/maxomedia/mxm-core#readme"
+}
