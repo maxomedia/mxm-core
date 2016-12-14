@@ -1,0 +1,77 @@
+form
+	div.row
+		.col-sm-4
+			p
+				label First Name
+				input(type='text')
+			p
+				label Email
+				input(type='email')
+			p
+				label Password
+				input(type='password')
+			p
+				label Number
+				input(type='number')
+			p
+				label Textarea
+				textarea
+			p
+				label Select
+				select
+					option(value="" disabled) Choose your option
+					option(value="1" selected) Option 1
+					option(value="2") Option 2
+					option(value="3") Option 3
+		.col-sm-4
+			p
+				label Error
+				input(type='text')
+				span.error Please fill in this field
+			p
+				label Email
+				input(type='email')
+				span.error Please fill in this field
+			p
+				label Password
+				input(type='password')
+				span.error Please fill in this field
+			p
+				label Number
+				input(type='number')
+				span.error Please fill in this field
+			p
+				label Textarea
+				textarea
+				span.error Please fill in this field
+			p
+				label Select
+				select
+					option(value="" disabled) Choose your option
+					option(value="1" selected) Option 1
+					option(value="2") Option 2
+					option(value="3") Option 3
+				span.error Please fill in this field
+		.col-sm-4
+			p
+				label(for='disabled') Disabled
+				input(disabled type='text')
+			p
+				label Email
+				input(disabled type='email')
+			p
+				label Password
+				input(disabled type='password')
+			p
+				label Number
+				input(disabled type='number')
+			p
+				label Textarea disabled
+				textarea(disabled)
+			p
+				label Select
+				select(disabled)
+					option(value="" disabled) Choose your option
+					option(value="1" selected) Option 1
+					option(value="2") Option 2
+					option(value="3") Option 3
