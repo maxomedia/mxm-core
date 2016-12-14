@@ -7,13 +7,17 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/maxomedia/mxm-core.git"
+    "url": "git+https://github.com/maxomedia/mxm-core.git",
+    "type": "git"
   },
   "author": "Philipp Gfeller <philipp.gfeller@maxomedia.ch>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/maxomedia/mxm-core/issues"
   },
-  "homepage": "https://github.com/maxomedia/mxm-core#readme"
+  "homepage": "https://github.com/maxomedia/mxm-core#readme",
+  "dependencies": {
+    "bootstrap-grid-light": "^1.1.0",
+    "normalize.css": "^5.0.0"
+  }
 }
